@@ -81,6 +81,6 @@ if __name__ == '__main__':
     elif len(argv) == 2:
         preprocessed = preprocess(argv[1])
         filename = basename(argv[1])
-        preprocessed.to_csv(filename.split('.')[0] + '_preprocessed.csv')
+        preprocessed.to_csv(filename.split('.')[0] + '_preprocessed.csv', index=False)
     else:
         raise Exception('Not correct number of arguments')
