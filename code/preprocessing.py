@@ -26,7 +26,7 @@ def preprocess(filename):
     
     fields = ['STN', 'WBAN', 'YEARMODA', 'TEMP', 'TEMP_count', 'DEWP', 'DEWP_count', 'SLP', 'SLP_count', 'STP', 'STP_count', 'VISIB', 'VISIB_count', 'WDSP', 'WDSP_count', 'MXSPD', 'GUST', 'MAX', 'MIN', 'PRCP', 'SNDP', 'FRSHTT']
     
-    df = pd.read_csv('CDO7301306888149.txt', 
+    df = pd.read_csv(filename, 
                   sep=r'\s+', 
                   names=fields, 
                   header=0, 
