@@ -73,11 +73,14 @@ def preprocess(filename):
 if __name__ == '__main__':
     
     from sys import argv
+    from os.path import basename
+
     if len(argv) == 3:
         preprocessed = preprocess(argv[1])
         preprocessed.to_csv(argv[2])
     elif len(argv) == 2:
         preprocessed = preprocess(argv[1])
-        preprocessed.to_csv(argv[1].split('.')[0] + '_preprocessed.csv')
+        filename = basename(argv[1])
+        preprocessed.to_csv(filename.split('.')[0] + '_preprocessed.csv')
     else:
         raise Exception('Not correct number of arguments')
